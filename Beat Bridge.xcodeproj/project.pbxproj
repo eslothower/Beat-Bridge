@@ -6,14 +6,73 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		47195A332D80E745006D7C42 /* Beat-Bridge-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47195A312D80E73A006D7C42 /* Beat-Bridge-Info.plist */; };
+		47849FEE2D80C2E000BA55F3 /* ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 47849FE42D80C2E000BA55F3 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47849FEC2D80C2E000BA55F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47849FC52D80C2B700BA55F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47849FE32D80C2E000BA55F3;
+			remoteInfo = ShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		47849FF32D80C2E000BA55F3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				47849FEE2D80C2E000BA55F3 /* ShareExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		47195A312D80E73A006D7C42 /* Beat-Bridge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Beat-Bridge-Info.plist"; sourceTree = "<group>"; };
 		47849FCD2D80C2B700BA55F3 /* Beat Bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beat Bridge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47849FE42D80C2E000BA55F3 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		47195A352D80EC47006D7C42 /* Exceptions for "ShareExtension" folder in "ShareExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 47849FE32D80C2E000BA55F3 /* ShareExtension */;
+		};
+		4781862E2D80DD7200CB3B6D /* Exceptions for "Beat Bridge" folder in "ShareExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models.swift,
+			);
+			target = 47849FE32D80C2E000BA55F3 /* ShareExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		47849FCF2D80C2B700BA55F3 /* Beat Bridge */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4781862E2D80DD7200CB3B6D /* Exceptions for "Beat Bridge" folder in "ShareExtension" target */,
+			);
 			path = "Beat Bridge";
+			sourceTree = "<group>";
+		};
+		47849FE52D80C2E000BA55F3 /* ShareExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				47195A352D80EC47006D7C42 /* Exceptions for "ShareExtension" folder in "ShareExtension" target */,
+			);
+			path = ShareExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +85,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		47849FE12D80C2E000BA55F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		47849FC42D80C2B700BA55F3 = {
 			isa = PBXGroup;
 			children = (
+				47195A312D80E73A006D7C42 /* Beat-Bridge-Info.plist */,
 				47849FCF2D80C2B700BA55F3 /* Beat Bridge */,
+				47849FE52D80C2E000BA55F3 /* ShareExtension */,
 				47849FCE2D80C2B700BA55F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				47849FCD2D80C2B700BA55F3 /* Beat Bridge.app */,
+				47849FE42D80C2E000BA55F3 /* ShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,10 +124,12 @@
 				47849FC92D80C2B700BA55F3 /* Sources */,
 				47849FCA2D80C2B700BA55F3 /* Frameworks */,
 				47849FCB2D80C2B700BA55F3 /* Resources */,
+				47849FF32D80C2E000BA55F3 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				47849FED2D80C2E000BA55F3 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				47849FCF2D80C2B700BA55F3 /* Beat Bridge */,
@@ -69,6 +140,28 @@
 			productName = "Beat Bridge";
 			productReference = 47849FCD2D80C2B700BA55F3 /* Beat Bridge.app */;
 			productType = "com.apple.product-type.application";
+		};
+		47849FE32D80C2E000BA55F3 /* ShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47849FF02D80C2E000BA55F3 /* Build configuration list for PBXNativeTarget "ShareExtension" */;
+			buildPhases = (
+				47849FE02D80C2E000BA55F3 /* Sources */,
+				47849FE12D80C2E000BA55F3 /* Frameworks */,
+				47849FE22D80C2E000BA55F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				47849FE52D80C2E000BA55F3 /* ShareExtension */,
+			);
+			name = ShareExtension;
+			packageProductDependencies = (
+			);
+			productName = ShareExtension;
+			productReference = 47849FE42D80C2E000BA55F3 /* ShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -82,6 +175,10 @@
 				TargetAttributes = {
 					47849FCC2D80C2B700BA55F3 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					47849FE32D80C2E000BA55F3 = {
+						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
 					};
 				};
 			};
@@ -100,12 +197,21 @@
 			projectRoot = "";
 			targets = (
 				47849FCC2D80C2B700BA55F3 /* Beat Bridge */,
+				47849FE32D80C2E000BA55F3 /* ShareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		47849FCB2D80C2B700BA55F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47195A332D80E745006D7C42 /* Beat-Bridge-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47849FE22D80C2E000BA55F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +228,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		47849FE02D80C2E000BA55F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47849FED2D80C2E000BA55F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47849FE32D80C2E000BA55F3 /* ShareExtension */;
+			targetProxy = 47849FEC2D80C2E000BA55F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		47849FDB2D80C2B800BA55F3 /* Debug */ = {
@@ -249,12 +370,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Beat Bridge/Beat Bridge.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Beat Bridge/Preview Content\"";
 				DEVELOPMENT_TEAM = AG7F8557TU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Beat-Bridge-Info.plist";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Beat Bridge needs access to your contacts to send music links.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -278,12 +402,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Beat Bridge/Beat Bridge.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Beat Bridge/Preview Content\"";
 				DEVELOPMENT_TEAM = AG7F8557TU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Beat-Bridge-Info.plist";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Beat Bridge needs access to your contacts to send music links.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,6 +424,63 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.elislothower.Beat-Bridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		47849FF12D80C2E000BA55F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AG7F8557TU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elislothower.Beat-Bridge.ShareExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ShareExtension/ShareExtension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47849FF22D80C2E000BA55F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AG7F8557TU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.elislothower.Beat-Bridge.ShareExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ShareExtension/ShareExtension-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,6 +503,15 @@
 			buildConfigurations = (
 				47849FDE2D80C2B800BA55F3 /* Debug */,
 				47849FDF2D80C2B800BA55F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47849FF02D80C2E000BA55F3 /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47849FF12D80C2E000BA55F3 /* Debug */,
+				47849FF22D80C2E000BA55F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
